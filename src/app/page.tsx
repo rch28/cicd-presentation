@@ -1,5 +1,14 @@
-import React from 'react'
-import { GitBranch, GitPullRequest, Workflow, Rocket, CheckCircle2, XCircle, RefreshCcw, GitFork } from 'lucide-react';
+import React from "react";
+import {
+  GitBranch,
+  GitPullRequest,
+  Workflow,
+  Rocket,
+  CheckCircle2,
+  XCircle,
+  RefreshCcw,
+  GitFork,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -11,28 +20,10 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { ArrowDown } from "lucide-react";
+import Pipeline from "@/components/Pipeline";
+import CiCdDiagram from "@/components/ci-cd-diagram";
 
 export default function Home() {
-  const Pipeline = () => (
-    <div className="flex items-center justify-center gap-4 my-8 flex-wrap">
-      {['Code', 'Build', 'Test', 'Deploy'].map((stage, index) => (
-        <React.Fragment key={stage}>
-          <div className="flex flex-col items-center">
-            <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
-              {index === 0 && <GitFork className="w-8 h-8 text-blue-600" />}
-              {index === 1 && <RefreshCcw className="w-8 h-8 text-blue-600" />}
-              {index === 2 && <CheckCircle2 className="w-8 h-8 text-blue-600" />}
-              {index === 3 && <Rocket className="w-8 h-8 text-blue-600" />}
-            </div>
-            <span className="mt-2 font-medium">{stage}</span>
-          </div>
-          {index < 3 && (
-            <div className="w-8 h-0.5 bg-blue-300" />
-          )}
-        </React.Fragment>
-      ))}
-    </div>
-  );
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900">
       {/* Hero Section */}
@@ -46,7 +37,7 @@ export default function Home() {
           <p className="text-xl md:text-2xl text-slate-700 dark:text-slate-300">
             Continuous Integration & Continuous Deployment Explained
           </p>
-          <Pipeline/>
+          <Pipeline />
           <div className="pt-4">
             <Button
               size="lg"
@@ -99,6 +90,9 @@ export default function Home() {
                       Together, they form a pipeline that enables teams to
                       deliver code changes more frequently and reliably.
                     </p>
+                  </div>
+                  <div className="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg">
+                    <CiCdDiagram />
                   </div>
                 </div>
               </CardContent>
