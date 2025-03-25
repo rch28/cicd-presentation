@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  GitBranch,
-  GitPullRequest,
-  Workflow,
-  Rocket,
-  CheckCircle2,
-  XCircle,
-  RefreshCcw,
-  GitFork,
-} from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -22,6 +13,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ArrowDown } from "lucide-react";
 import Pipeline from "@/components/Pipeline";
 import CiCdDiagram from "@/components/ci-cd-diagram";
+import BenefitsSection from "@/components/benefit-section";
+import ToolsSection from "@/components/tools-section";
+import GithubSection from "@/components/github-section";
+import AboutProject from "@/components/about-project";
 
 export default function Home() {
   return (
@@ -97,6 +92,21 @@ export default function Home() {
                 </div>
               </CardContent>
             </Card>
+          </TabsContent>
+          <TabsContent value="benefits">
+            <BenefitsSection />
+          </TabsContent>
+
+          <TabsContent value="tools">
+            <ToolsSection />
+          </TabsContent>
+
+          <TabsContent value="github">
+            <GithubSection />
+          </TabsContent>
+
+          <TabsContent value="about">
+            <AboutProject />
           </TabsContent>
         </Tabs>
       </section>
