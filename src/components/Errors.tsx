@@ -358,7 +358,7 @@ Notice: Deployment failed! ❌`}
           uses: JamesIves/github-pages-deploy-action@v4
           with:
             folder: out
-            token: 'your-token-here'  
+            token: 'your-token-here '  
       `}
                 </pre>
               </div>
