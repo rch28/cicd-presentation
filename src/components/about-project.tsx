@@ -19,9 +19,8 @@ export default function AboutProject() {
       </CardHeader>
       <CardContent className="space-y-6">
         <p className="text-lg text-slate-700 dark:text-slate-300">
-          This CI/CD presentation website itself is built using modern web
-          development practices and implements the very CI/CD principles it
-          explains.
+          This CI/CD presentation website itself is built to practice and
+          implement the very CI/CD principles it explains.
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -45,6 +44,12 @@ export default function AboutProject() {
               </li>
               <li>
                 <strong>CI/CD:</strong> GitHub Actions
+              </li>
+              <li>
+                <strong>Icons:</strong> lucide React Icons
+              </li>
+              <li>
+                <strong>Theme:</strong> Next Themes
               </li>
             </ul>
           </div>

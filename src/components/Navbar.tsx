@@ -4,9 +4,10 @@ import { useTheme } from "next-themes";
 
 const ThemeChanger = () => {
   const { theme, setTheme } = useTheme();
+  console.log(theme);
   return (
     <div>
-      {theme === "dark" && (
+      {(theme === "dark" || theme === "system") && (
         <button onClick={() => setTheme("light")} className="cursor-pointer">
           <Sun className="h-5 w-5" />
         </button>
