@@ -17,6 +17,7 @@ import BenefitsSection from "@/components/benefit-section";
 import ToolsSection from "@/components/tools-section";
 import GithubSection from "@/components/github-section";
 import AboutProject from "@/components/about-project";
+import Errors from "@/components/Errors";
 
 export default function Home() {
   return (
@@ -51,11 +52,12 @@ export default function Home() {
       {/* Main Content */}
       <section className="py-20 px-4 max-w-7xl mx-auto">
         <Tabs defaultValue="introduction" className="w-full">
-          <TabsList className="grid grid-cols-2 md:grid-cols-5 mb-8">
+          <TabsList className="grid grid-cols-2 md:grid-cols-6 mb-8">
             <TabsTrigger value="introduction">Introduction</TabsTrigger>
             <TabsTrigger value="benefits">Benefits</TabsTrigger>
             <TabsTrigger value="tools">Tools & Practices</TabsTrigger>
             <TabsTrigger value="github">GitHub Integration</TabsTrigger>
+            <TabsTrigger value="errors">Errors</TabsTrigger>
             <TabsTrigger value="about">About This Project</TabsTrigger>
           </TabsList>
 
@@ -107,6 +109,9 @@ export default function Home() {
 
           <TabsContent value="about">
             <AboutProject />
+          </TabsContent>
+          <TabsContent value="errors">
+            <Errors />
           </TabsContent>
         </Tabs>
       </section>

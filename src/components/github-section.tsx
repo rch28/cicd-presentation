@@ -63,22 +63,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v1
         with:
-          node-version: '18'
-          
+          bun-version: latest
+
       - name: Install dependencies
-        run: npm ci
-        
+        run: bun install
+
       - name: Build
-        run: npm run build
-        
+        run: bun run build
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: out`}
+          folder: out
+`}
                   </code>
                 </pre>
               </div>
