@@ -13,7 +13,7 @@ export default function GithubSection() {
       <CardHeader>
         <CardTitle>GitHub Actions & GitHub Pages</CardTitle>
         <CardDescription>
-          How GitHub's tools power modern CI/CD workflows
+          How GitHub&apos;s tools power modern CI/CD workflows
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -98,8 +98,8 @@ jobs:
                   and publishes a website.
                 </p>
                 <p className="text-slate-700 dark:text-slate-300 mb-4">
-                  It's perfect for hosting documentation, portfolios, project
-                  pages, or even full websites directly from your GitHub
+                  It&apos;s perfect for hosting documentation, portfolios,
+                  project pages, or even full websites directly from your GitHub
                   repository.
                 </p>
                 <h4 className="text-lg font-medium mt-6 mb-2">Key Features:</h4>
