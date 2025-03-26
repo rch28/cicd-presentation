@@ -17,6 +17,10 @@ export default function Errors() {
       id: "second-error",
       name: "Second Error",
     },
+    {
+      id: "third-error",
+      name: "Third Error",
+    },
   ];
 
   return (
@@ -217,6 +221,44 @@ repository.
 `}
                 </code>
               </pre>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="third-error">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h1>Error</h1>
+                <pre className="border border-gray-200 dark:border-gray-700 p-4 rounded-lg overflow-x-auto">
+                  <code>
+                    {`Run JamesIves/github-pages-deploy-action@v4
+    ╭━━━╮╭╮╭╮╱╭╮╱╱╭╮╱╱╭━━━╮
+    ┃╭━╮┣╯╰┫┃╱┃┃╱╱┃┃╱╱┃╭━╮┃
+    ┃┃╱╰╋╮╭┫╰━╯┣╮╭┫╰━╮┃╰━╯┣━━┳━━┳━━┳━━╮
+    ┃┃╭━╋┫┃┃╭━╮┃┃┃┃╭╮┃┃╭━━┫╭╮┃╭╮┃┃━┫━━┫
+    ┃╰┻━┃┃╰┫┃╱┃┃╰╯┃╰╯┃┃┃╱╱┃╭╮┃╰╯┃┃━╋━━┃
+    ╰━━━┻┻━┻╯╱╰┻━━┻━━╯╰╯╱╱╰╯╰┻━╮┣━━┻━━╯
+    ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
+    ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯
+    ╭━━━╮╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╭━━━╮╱╱╭╮
+    ╰╮╭╮┃╱╱╱╱╱┃┃╱╱╱╱╱╱╱╱┃╭━╮┃╱╭╯╰╮
+    ╱┃┃┃┣━━┳━━┫┃╭━━┳╮╱╭╮┃┃╱┃┣━┻╮╭╋┳━━┳━╮
+    ╱┃┃┃┃┃━┫╭╮┃┃┃╭╮┃┃╱┃┃┃╰━╯┃╭━┫┃┣┫╭╮┃╭╮╮
+    ╭╯╰╯┃┃━┫╰╯┃╰┫╰╯┃╰━╯┃┃╭━╮┃╰━┫╰┫┃╰╯┃┃┃┃
+    ╰━━━┻━━┫╭━┻━┻━━┻━╮╭╯╰╯╱╰┻━━┻━┻┻━━┻╯╰╯
+    ╱╱╱╱╱╱╱┃┃╱╱╱╱╱╱╭━╯┃
+    ╱╱╱╱╱╱╱╰╯╱╱╱╱╱╱╰━━╯
+    
+    💖 Support: https://github.com/sponsors/JamesIves
+    📣 Maintained by James Ives: https://jamesiv.es
+    🚀 Getting Started Guide: https://github.com/JamesIves/github-pages-deploy-action
+    ❓ Discussions / Q&A: https://github.com/JamesIves/github-pages-deploy-action/discussions
+    🔧 Report a Bug: https://github.com/JamesIves/github-pages-deploy-action/issues
+Checking configuration and starting deployment… 🚦
+Error: The directory you're trying to deploy named /home/runner/work/cicd-presentation/cicd-presentation/out doesn't exist. Please double check the path and any prerequisite build scripts and try again. ❗
+Notice: Deployment failed! ❌`}
+                  </code>
+                </pre>
+              </div>
             </div>
           </TabsContent>
         </Tabs>
