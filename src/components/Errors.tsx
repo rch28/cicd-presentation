@@ -353,12 +353,13 @@ Notice: Deployment failed! ❌`}
               <div>
                 <h1>Resolution</h1>
                 <pre className="border border-gray-200 dark:border-gray-700 p-4 rounded-lg overflow-x-auto">
-                  {`
-        - name: Deploy
-          uses: JamesIves/github-pages-deploy-action@v4
-          with:
-            folder: out
-            token: 'your-token-here '  
+                  {`name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write 
       `}
                 </pre>
               </div>
