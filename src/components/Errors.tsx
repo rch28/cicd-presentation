@@ -21,6 +21,10 @@ export default function Errors() {
       id: "third-error",
       name: "Third Error",
     },
+    {
+      id: "fourth-error",
+      name: "Fourth Error",
+    },
   ];
 
   return (
@@ -257,6 +261,105 @@ Checking configuration and starting deployment… 🚦
 Error: The directory you're trying to deploy named /home/runner/work/cicd-presentation/cicd-presentation/out doesn't exist. Please double check the path and any prerequisite build scripts and try again. ❗
 Notice: Deployment failed! ❌`}
                   </code>
+                </pre>
+              </div>
+              <div>
+                <h1>Added </h1>
+                <pre className="border border-gray-200 dark:border-gray-700 p-4 rounded-lg overflow-x-auto">
+                  <code>
+                    {`const nextConfig: NextConfig = {
+                      /* config options here */
+                      output: "export",
+                    };
+                    `}
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </TabsContent>
+          <TabsContent value="fourth-error">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h1>Error</h1>
+                <pre className="border border-gray-200 dark:border-gray-700 p-4 rounded-lg overflow-x-auto">
+                  <code className="language-yaml ">
+                    {`Run JamesIves/github-pages-deploy-action@v4
+    ╭━━━╮╭╮╭╮╱╭╮╱╱╭╮╱╱╭━━━╮
+    ┃╭━╮┣╯╰┫┃╱┃┃╱╱┃┃╱╱┃╭━╮┃
+    ┃┃╱╰╋╮╭┫╰━╯┣╮╭┫╰━╮┃╰━╯┣━━┳━━┳━━┳━━╮
+    ┃┃╭━╋┫┃┃╭━╮┃┃┃┃╭╮┃┃╭━━┫╭╮┃╭╮┃┃━┫━━┫
+    ┃╰┻━┃┃╰┫┃╱┃┃╰╯┃╰╯┃┃┃╱╱┃╭╮┃╰╯┃┃━╋━━┃
+    ╰━━━┻┻━┻╯╱╰┻━━┻━━╯╰╯╱╱╰╯╰┻━╮┣━━┻━━╯
+    ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
+    ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯
+    ╭━━━╮╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╭━━━╮╱╱╭╮
+    ╰╮╭╮┃╱╱╱╱╱┃┃╱╱╱╱╱╱╱╱┃╭━╮┃╱╭╯╰╮
+    ╱┃┃┃┣━━┳━━┫┃╭━━┳╮╱╭╮┃┃╱┃┣━┻╮╭╋┳━━┳━╮
+    ╱┃┃┃┃┃━┫╭╮┃┃┃╭╮┃┃╱┃┃┃╰━╯┃╭━┫┃┣┫╭╮┃╭╮╮
+    ╭╯╰╯┃┃━┫╰╯┃╰┫╰╯┃╰━╯┃┃╭━╮┃╰━┫╰┫┃╰╯┃┃┃┃
+    ╰━━━┻━━┫╭━┻━┻━━┻━╮╭╯╰╯╱╰┻━━┻━┻┻━━┻╯╰╯
+    ╱╱╱╱╱╱╱┃┃╱╱╱╱╱╱╭━╯┃
+    ╱╱╱╱╱╱╱╰╯╱╱╱╱╱╱╰━━╯
+    
+    💖 Support: https://github.com/sponsors/JamesIves
+    📣 Maintained by James Ives: https://jamesiv.es
+    🚀 Getting Started Guide: https://github.com/JamesIves/github-pages-deploy-action
+    ❓ Discussions / Q&A: https://github.com/JamesIves/github-pages-deploy-action/discussions
+    🔧 Report a Bug: https://github.com/JamesIves/github-pages-deploy-action/issues
+Checking configuration and starting deployment… 🚦
+Deploying using Deploy Token… 🔑
+Configuring git…
+/usr/bin/git config --global --add safe.directory /home/runner/work/cicd-presentation/cicd-presentation
+/usr/bin/git config user.name rch28
+/usr/bin/git config user.email 83944951+rch28@users.noreply.github.com
+/usr/bin/git config core.ignorecase false
+/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+/usr/bin/git remote rm origin
+/usr/bin/git remote add origin ***github.com/rch28/cicd-presentation.git
+Git configured… 🔧
+Starting to commit changes…
+/usr/bin/git ls-remote --heads ***github.com/rch28/cicd-presentation.git refs/heads/gh-pages
+Creating worktree…
+/usr/bin/git worktree add --no-checkout --detach github-pages-deploy-action-temp-deployment-folder
+Preparing worktree (detached HEAD fda0721)
+/usr/bin/git checkout --orphan gh-pages
+Switched to a new branch 'gh-pages'
+Created the gh-pages branch… 🔧
+/usr/bin/git reset --hard
+/usr/bin/git commit --no-verify --allow-empty -m Initial gh-pages commit
+[gh-pages (root-commit) 77b5adf] Initial gh-pages commit
+/usr/bin/git config --global --add safe.directory /home/runner/work/cicd-presentation/cicd-presentation/github-pages-deploy-action-temp-deployment-folder
+/usr/bin/chmod -R +rw /home/runner/work/cicd-presentation/cicd-presentation/out
+/usr/bin/rsync -q -av --checksum --progress /home/runner/work/cicd-presentation/cicd-presentation/out/. github-pages-deploy-action-temp-deployment-folder --delete --exclude CNAME --exclude .nojekyll --exclude .ssh --exclude .git --exclude .github
+Checking if there are files to commit…
+/usr/bin/git add --all .
+/usr/bin/git checkout -b github-pages-deploy-action/73e7q5017
+Switched to a new branch 'github-pages-deploy-action/73e7q5017'
+/usr/bin/git commit -m Deploying to gh-pages from @ rch28/cicd-presentation@fda0721b7516e99207359379a2409643d83b3ade 🚀 --quiet --no-verify
+Force-pushing changes...
+/usr/bin/git push --force ***github.com/rch28/cicd-presentation.git github-pages-deploy-action/73e7q5017:gh-pages
+remote: Permission to rch28/cicd-presentation.git denied to github-actions[bot].
+fatal: unable to access 'https://github.com/rch28/cicd-presentation.git/': The requested URL returned error: 403
+Running post deployment cleanup jobs… 🗑️
+/usr/bin/git checkout -B github-pages-deploy-action/73e7q5017
+Reset branch 'github-pages-deploy-action/73e7q5017'
+/usr/bin/chmod -R +rw github-pages-deploy-action-temp-deployment-folder
+/usr/bin/git worktree remove github-pages-deploy-action-temp-deployment-folder --force
+Error: The deploy step encountered an error: The process '/usr/bin/git' failed with exit code 128 ❌
+Notice: Deployment failed! ❌`}
+                  </code>
+                </pre>
+              </div>
+              <div>
+                <h1>Resolution</h1>
+                <pre className="border border-gray-200 dark:border-gray-700 p-4 rounded-lg overflow-x-auto">
+                  {`
+        - name: Deploy
+          uses: JamesIves/github-pages-deploy-action@v4
+          with:
+            folder: out
+            token: 'your-token-here'  
+      `}
                 </pre>
               </div>
             </div>
