@@ -20,9 +20,7 @@ jobs:
         run: bun install
 
       - name: Build and Export
-        run: |
-          bun run build
-          bun run export
+        run: bun run build && bun run export
         env:
           NODE_ENV: production
 
