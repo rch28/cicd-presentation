@@ -57,7 +57,7 @@ export default function Home() {
             <TabsTrigger value="benefits">Benefits</TabsTrigger>
             <TabsTrigger value="tools">Tools & Practices</TabsTrigger>
             <TabsTrigger value="github">GitHub Integration</TabsTrigger>
-            <TabsTrigger value="errors">Errors</TabsTrigger>
+            {/* <TabsTrigger value="errors">Errors</TabsTrigger> */}
             <TabsTrigger value="about">About This Project</TabsTrigger>
           </TabsList>
 
